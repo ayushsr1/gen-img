@@ -1,6 +1,7 @@
-export default function handler(_req, res) {
-  res.status(200).json({
+export default function handler(req, res) {
+  return Response.json({
     ok: true,
     message: 'gen-img serverless app is running',
+    method: req.method,
   });
 }
