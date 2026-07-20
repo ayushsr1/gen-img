@@ -1,7 +1,11 @@
 export default function handler(req, res) {
-  return Response.json({
-    ok: true,
-    message: 'gen-img serverless app is running',
-    method: req.method,
-  });
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'application/json');
+  res.end(
+    JSON.stringify({
+      ok: true,
+      message: 'gen-img serverless app is running',
+      method: req.method,
+    })
+  );
 }
